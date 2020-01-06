@@ -14,7 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let scheduleService = ScheduleServiceDefault()
+        scheduleService.requestGroupId(groupNumber: "4435", success: { (groupIds) in
+            if let groupId = groupIds.first {
+                scheduleService.requestSchedule(for: String(groupId.id), success: { (schdule) in
+                    print(schdule)
+                }, failure: { _ in })
+            }
+        }, failure: { _ in })
         return true
     }
 

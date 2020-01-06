@@ -9,8 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    private let scheduleService = ScheduleServiceDefault()
+    @State private var schedule: ScheduleResponseModel?
+    
     var body: some View {
-        Text("Hello, World!")
+        view()
+            .onAppear {
+                self.scheduleService.requestGroupId(groupNumber: "4435", success: { (groupIdResponseModels) in
+                    if let first = groupIdResponseModels.first {
+                        self.scheduleService.requestSchedule(for: String(first.id), success: { (scheduleResponseModel) in
+                            self.schedule = scheduleResponseModel
+                        }, failure: { _ in })
+                    }
+                }, failure: { _ in })
+        }
+    }
+    
+    private func view() -> AnyView {
+        if let schedule = schedule {
+            let viewModel = WeekScheduleViewModel(scheduleResponseModel: schedule)
+            return AnyView(WeekScheduleView(weekSchedule: viewModel))
+        } else {
+            return AnyView(Text("Loading"))
+        }
     }
 }
 

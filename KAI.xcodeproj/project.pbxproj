@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE1F722F23C36F1B00278133 /* DayScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F722E23C36F1B00278133 /* DayScheduleView.swift */; };
+		CE1F723123C39F4F00278133 /* DetailLessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F723023C39F4F00278133 /* DetailLessonView.swift */; };
+		CE1F723323C3A3DD00278133 /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F723223C3A3DD00278133 /* ImageRow.swift */; };
+		CE1F723923C3ACFF00278133 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F723823C3ACFF00278133 /* LessonView.swift */; };
+		CE1F723B23C3AE3800278133 /* WeekScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F723A23C3AE3800278133 /* WeekScheduleView.swift */; };
+		CE1F723D23C3AE8000278133 /* LessonResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F723C23C3AE8000278133 /* LessonResponseModel.swift */; };
+		CE1F723F23C3AE9800278133 /* LessonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1F723E23C3AE9800278133 /* LessonViewModel.swift */; };
 		CEC8094723BF7DDB0027BF65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8094623BF7DDB0027BF65 /* AppDelegate.swift */; };
 		CEC8094923BF7DDB0027BF65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8094823BF7DDB0027BF65 /* SceneDelegate.swift */; };
 		CEC8094B23BF7DDB0027BF65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8094A23BF7DDB0027BF65 /* ContentView.swift */; };
 		CEC8094D23BF7DDF0027BF65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC8094C23BF7DDF0027BF65 /* Assets.xcassets */; };
 		CEC8095023BF7DDF0027BF65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC8094F23BF7DDF0027BF65 /* Preview Assets.xcassets */; };
 		CEC8095323BF7DDF0027BF65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC8095123BF7DDF0027BF65 /* LaunchScreen.storyboard */; };
+		CEC8095B23BF7E2F0027BF65 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8095A23BF7E2F0027BF65 /* API.swift */; };
+		CEC8095D23BF980F0027BF65 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8095C23BF980F0027BF65 /* Schedule.swift */; };
+		CEC8095F23BF9F2B0027BF65 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC8095E23BF9F2B0027BF65 /* ScheduleService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE1F722E23C36F1B00278133 /* DayScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayScheduleView.swift; sourceTree = "<group>"; };
+		CE1F723023C39F4F00278133 /* DetailLessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLessonView.swift; sourceTree = "<group>"; };
+		CE1F723223C3A3DD00278133 /* ImageRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRow.swift; sourceTree = "<group>"; };
+		CE1F723823C3ACFF00278133 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		CE1F723A23C3AE3800278133 /* WeekScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekScheduleView.swift; sourceTree = "<group>"; };
+		CE1F723C23C3AE8000278133 /* LessonResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonResponseModel.swift; sourceTree = "<group>"; };
+		CE1F723E23C3AE9800278133 /* LessonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonViewModel.swift; sourceTree = "<group>"; };
 		CEC8094323BF7DDB0027BF65 /* KAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC8094623BF7DDB0027BF65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC8094823BF7DDB0027BF65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +41,9 @@
 		CEC8094F23BF7DDF0027BF65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CEC8095223BF7DDF0027BF65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC8095423BF7DDF0027BF65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEC8095A23BF7E2F0027BF65 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CEC8095C23BF980F0027BF65 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		CEC8095E23BF9F2B0027BF65 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +57,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE1F723423C3AC9B00278133 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CEC8095A23BF7E2F0027BF65 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CE1F723523C3ACA600278133 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEC8095C23BF980F0027BF65 /* Schedule.swift */,
+				CE1F723C23C3AE8000278133 /* LessonResponseModel.swift */,
+				CE1F723E23C3AE9800278133 /* LessonViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE1F723623C3ACB000278133 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE1F723223C3A3DD00278133 /* ImageRow.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CE1F723723C3ACBC00278133 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CEC8095E23BF9F2B0027BF65 /* ScheduleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		CEC8093A23BF7DDB0027BF65 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +113,14 @@
 				CEC8094623BF7DDB0027BF65 /* AppDelegate.swift */,
 				CEC8094823BF7DDB0027BF65 /* SceneDelegate.swift */,
 				CEC8094A23BF7DDB0027BF65 /* ContentView.swift */,
+				CE1F723423C3AC9B00278133 /* API */,
+				CE1F723723C3ACBC00278133 /* Services */,
+				CE1F723523C3ACA600278133 /* Models */,
+				CE1F722E23C36F1B00278133 /* DayScheduleView.swift */,
+				CE1F723023C39F4F00278133 /* DetailLessonView.swift */,
+				CE1F723A23C3AE3800278133 /* WeekScheduleView.swift */,
+				CE1F723823C3ACFF00278133 /* LessonView.swift */,
+				CE1F723623C3ACB000278133 /* Common */,
 				CEC8094C23BF7DDF0027BF65 /* Assets.xcassets */,
 				CEC8095123BF7DDF0027BF65 /* LaunchScreen.storyboard */,
 				CEC8095423BF7DDF0027BF65 /* Info.plist */,
@@ -146,8 +208,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1F723B23C3AE3800278133 /* WeekScheduleView.swift in Sources */,
+				CE1F723323C3A3DD00278133 /* ImageRow.swift in Sources */,
+				CEC8095F23BF9F2B0027BF65 /* ScheduleService.swift in Sources */,
+				CE1F723923C3ACFF00278133 /* LessonView.swift in Sources */,
+				CE1F723F23C3AE9800278133 /* LessonViewModel.swift in Sources */,
+				CE1F723123C39F4F00278133 /* DetailLessonView.swift in Sources */,
 				CEC8094723BF7DDB0027BF65 /* AppDelegate.swift in Sources */,
 				CEC8094923BF7DDB0027BF65 /* SceneDelegate.swift in Sources */,
+				CEC8095B23BF7E2F0027BF65 /* API.swift in Sources */,
+				CE1F723D23C3AE8000278133 /* LessonResponseModel.swift in Sources */,
+				CE1F722F23C36F1B00278133 /* DayScheduleView.swift in Sources */,
+				CEC8095D23BF980F0027BF65 /* Schedule.swift in Sources */,
 				CEC8094B23BF7DDB0027BF65 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
