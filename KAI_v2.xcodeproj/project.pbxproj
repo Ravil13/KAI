@@ -13,6 +13,14 @@
 		CE709DBC23C4DF5E00B1D537 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE709DBB23C4DF5E00B1D537 /* Assets.xcassets */; };
 		CE709DBF23C4DF5E00B1D537 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE709DBE23C4DF5E00B1D537 /* Preview Assets.xcassets */; };
 		CE709DC223C4DF5E00B1D537 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE709DC023C4DF5E00B1D537 /* LaunchScreen.storyboard */; };
+		CE709DCA23C4DF9D00B1D537 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DC923C4DF9D00B1D537 /* API.swift */; };
+		CE709DCE23C4DFE200B1D537 /* ScheduleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DCD23C4DFE200B1D537 /* ScheduleService.swift */; };
+		CE709DD023C4E01C00B1D537 /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DCF23C4E01C00B1D537 /* Schedule.swift */; };
+		CE709DD223C4E0B500B1D537 /* ScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD123C4E0B500B1D537 /* ScheduleViewModel.swift */; };
+		CE709DD423C4E37900B1D537 /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD323C4E37900B1D537 /* WebError.swift */; };
+		CE709DD623C504E100B1D537 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD523C504E100B1D537 /* LessonView.swift */; };
+		CE709DDA23C506AB00B1D537 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD923C506AB00B1D537 /* ScheduleView.swift */; };
+		CEDD800823CD8C070014A9F3 /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD800723CD8C070014A9F3 /* ScheduleList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		CE709DBE23C4DF5E00B1D537 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE709DC123C4DF5E00B1D537 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE709DC323C4DF5E00B1D537 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE709DC923C4DF9D00B1D537 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		CE709DCD23C4DFE200B1D537 /* ScheduleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleService.swift; sourceTree = "<group>"; };
+		CE709DCF23C4E01C00B1D537 /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		CE709DD123C4E0B500B1D537 /* ScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewModel.swift; sourceTree = "<group>"; };
+		CE709DD323C4E37900B1D537 /* WebError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebError.swift; sourceTree = "<group>"; };
+		CE709DD523C504E100B1D537 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
+		CE709DD923C506AB00B1D537 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		CEDD800723CD8C070014A9F3 /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +74,11 @@
 			children = (
 				CE709DB523C4DF5D00B1D537 /* AppDelegate.swift */,
 				CE709DB723C4DF5D00B1D537 /* SceneDelegate.swift */,
-				CE709DB923C4DF5D00B1D537 /* ContentView.swift */,
+				CE709DD323C4E37900B1D537 /* WebError.swift */,
+				CE709DD723C5065600B1D537 /* ViewModels */,
+				CE709DD823C5065F00B1D537 /* Views */,
+				CE709DCC23C4DFD700B1D537 /* Services */,
+				CE709DCB23C4DFB000B1D537 /* API */,
 				CE709DBB23C4DF5E00B1D537 /* Assets.xcassets */,
 				CE709DC023C4DF5E00B1D537 /* LaunchScreen.storyboard */,
 				CE709DC323C4DF5E00B1D537 /* Info.plist */,
@@ -73,6 +93,42 @@
 				CE709DBE23C4DF5E00B1D537 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE709DCB23C4DFB000B1D537 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CE709DC923C4DF9D00B1D537 /* API.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		CE709DCC23C4DFD700B1D537 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE709DCF23C4E01C00B1D537 /* Schedule.swift */,
+				CE709DCD23C4DFE200B1D537 /* ScheduleService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE709DD723C5065600B1D537 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				CE709DD123C4E0B500B1D537 /* ScheduleViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE709DD823C5065F00B1D537 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE709DB923C4DF5D00B1D537 /* ContentView.swift */,
+				CE709DD523C504E100B1D537 /* LessonView.swift */,
+				CE709DD923C506AB00B1D537 /* ScheduleView.swift */,
+				CEDD800723CD8C070014A9F3 /* ScheduleList.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,9 +202,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE709DD023C4E01C00B1D537 /* Schedule.swift in Sources */,
+				CE709DD623C504E100B1D537 /* LessonView.swift in Sources */,
+				CE709DD423C4E37900B1D537 /* WebError.swift in Sources */,
 				CE709DB623C4DF5D00B1D537 /* AppDelegate.swift in Sources */,
+				CE709DCE23C4DFE200B1D537 /* ScheduleService.swift in Sources */,
+				CE709DDA23C506AB00B1D537 /* ScheduleView.swift in Sources */,
+				CE709DD223C4E0B500B1D537 /* ScheduleViewModel.swift in Sources */,
 				CE709DB823C4DF5D00B1D537 /* SceneDelegate.swift in Sources */,
+				CE709DCA23C4DF9D00B1D537 /* API.swift in Sources */,
 				CE709DBA23C4DF5D00B1D537 /* ContentView.swift in Sources */,
+				CEDD800823CD8C070014A9F3 /* ScheduleList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
