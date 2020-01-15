@@ -93,7 +93,6 @@ class ScheduleViewModel: ObservableObject {
     
     // MARK: - Properties
     
-//    @Published var daySchedules: [DayScheduleViewModel] = []
     @Published var evenSchedules: [DayScheduleViewModel] = []
     @Published var oddSchedules: [DayScheduleViewModel] = []
     
