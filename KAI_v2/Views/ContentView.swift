@@ -17,13 +17,13 @@ struct ContentView: View {
                     Text("Расписание")
             }
             
-            Text("Новости")
+            NewsList()
                 .tabItem {
                     Image(systemName: "person.2.square.stack")
                     Text("Новости")
             }
             
-            Text("Карта")
+            MapView()
                 .tabItem {
                     Image(systemName: "map")
                     Text("Карта")
@@ -38,8 +38,4 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+ 

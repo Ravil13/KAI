@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftSoup
 
 typealias ErrorClouser = (NSError) -> Void
 
@@ -62,6 +63,43 @@ enum API {
                     print("PARSE ERROR: \(error.localizedDescription)")
                     failure(error)
                 }
+            }
+        }
+        
+        task.resume()
+    }
+    
+    static func requestHTML(endpoint: Endpoint,
+                            additionalParameters: [String: String]? = nil,
+                            success: @escaping (String) -> Void,
+                            failure: @escaping ErrorClouser) {
+        
+        guard var urlComponents = endpoint.urlComponents else { return }
+        
+        var parameters = endpoint.parameters ?? [:]
+        parameters.merge(additionalParameters ?? [:]) { (_, new) in new }
+        
+        urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
+        
+        guard let url = urlComponents.url else { return }
+        
+        print("REQUEST: \(url.absoluteString)")
+        
+        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
+            DispatchQueue.main.async {
+                if let error = error as NSError? {
+                    print("ERROR: \(error.localizedDescription)")
+                    failure(error)
+                    return
+                }
+                
+                guard let data = data, let html = String(data: data, encoding: .utf8) else {
+                    print("NO DATA")
+                    failure(WebError.somethingWentWrong)
+                    return
+                }
+                
+                success(html)
             }
         }
         

@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C220071D0690E80A3EB32995 /* Pods_KAI_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A0B5A07C36CBA10169E1CA /* Pods_KAI_v2.framework */; };
+		CE009CB3241E592C0069862D /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE009CB2241E592C0069862D /* NewsList.swift */; };
+		CE009CB5241E599C0069862D /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE009CB4241E599C0069862D /* NewsViewModel.swift */; };
+		CE009CB7241E61350069862D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE009CB6241E61350069862D /* WebView.swift */; };
+		CE009CB9241E6B400069862D /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE009CB8241E6B400069862D /* NewsModel.swift */; };
+		CE009CBC241E8DAA0069862D /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE009CBB241E8DAA0069862D /* NewsView.swift */; };
+		CE05DB1423D4BEF9004A1E47 /* CurrentDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05DB1323D4BEF9004A1E47 /* CurrentDay.swift */; };
+		CE05DB1623D4BF70004A1E47 /* WeekPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05DB1523D4BF70004A1E47 /* WeekPicker.swift */; };
+		CE6188BD23D77921000F263E /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6188BC23D77921000F263E /* ScheduleList.swift */; };
 		CE709DB623C4DF5D00B1D537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DB523C4DF5D00B1D537 /* AppDelegate.swift */; };
 		CE709DB823C4DF5D00B1D537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DB723C4DF5D00B1D537 /* SceneDelegate.swift */; };
 		CE709DBA23C4DF5D00B1D537 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DB923C4DF5D00B1D537 /* ContentView.swift */; };
@@ -20,10 +29,29 @@
 		CE709DD423C4E37900B1D537 /* WebError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD323C4E37900B1D537 /* WebError.swift */; };
 		CE709DD623C504E100B1D537 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD523C504E100B1D537 /* LessonView.swift */; };
 		CE709DDA23C506AB00B1D537 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD923C506AB00B1D537 /* ScheduleView.swift */; };
-		CEDD800823CD8C070014A9F3 /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDD800723CD8C070014A9F3 /* ScheduleList.swift */; };
+		CEBCC76023FAC82B00B2AD8C /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCC75F23FAC82B00B2AD8C /* NewsService.swift */; };
+		CEE3A12A241EAC3E0045E5F9 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3A129241EAC3E0045E5F9 /* SafariView.swift */; };
+		CEED6E4523EEB6D70080A6C3 /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6E4423EEB6D70080A6C3 /* DataState.swift */; };
+		CEED6E4723EEB7530080A6C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6E4623EEB7530080A6C3 /* LoadingView.swift */; };
+		CEFB56F123D230A500A64DA9 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB56ED23D230A500A64DA9 /* MapScreen.swift */; };
+		CEFB56F223D230A500A64DA9 /* UniversityBuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB56EE23D230A500A64DA9 /* UniversityBuildingAnnotation.swift */; };
+		CEFB56F323D230A500A64DA9 /* AUIMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB56EF23D230A500A64DA9 /* AUIMapViewController.swift */; };
+		CEFB56F423D230A500A64DA9 /* UniversityBuildings.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEFB56F023D230A500A64DA9 /* UniversityBuildings.plist */; };
+		CEFB56F623D230B500A64DA9 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB56F523D230B500A64DA9 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63A0B5A07C36CBA10169E1CA /* Pods_KAI_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KAI_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DE0C29BE0CDF79D8960B25E /* Pods-KAI_v2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAI_v2.debug.xcconfig"; path = "Target Support Files/Pods-KAI_v2/Pods-KAI_v2.debug.xcconfig"; sourceTree = "<group>"; };
+		8B49B1C47D2F45DB1583AF4E /* Pods-KAI_v2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KAI_v2.release.xcconfig"; path = "Target Support Files/Pods-KAI_v2/Pods-KAI_v2.release.xcconfig"; sourceTree = "<group>"; };
+		CE009CB2241E592C0069862D /* NewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
+		CE009CB4241E599C0069862D /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
+		CE009CB6241E61350069862D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		CE009CB8241E6B400069862D /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		CE009CBB241E8DAA0069862D /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		CE05DB1323D4BEF9004A1E47 /* CurrentDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDay.swift; sourceTree = "<group>"; };
+		CE05DB1523D4BF70004A1E47 /* WeekPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPicker.swift; sourceTree = "<group>"; };
+		CE6188BC23D77921000F263E /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 		CE709DB223C4DF5D00B1D537 /* KAI_v2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KAI_v2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE709DB523C4DF5D00B1D537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE709DB723C4DF5D00B1D537 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +67,15 @@
 		CE709DD323C4E37900B1D537 /* WebError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebError.swift; sourceTree = "<group>"; };
 		CE709DD523C504E100B1D537 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
 		CE709DD923C506AB00B1D537 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
-		CEDD800723CD8C070014A9F3 /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
+		CEBCC75F23FAC82B00B2AD8C /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		CEE3A129241EAC3E0045E5F9 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
+		CEED6E4423EEB6D70080A6C3 /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
+		CEED6E4623EEB7530080A6C3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		CEFB56ED23D230A500A64DA9 /* MapScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
+		CEFB56EE23D230A500A64DA9 /* UniversityBuildingAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityBuildingAnnotation.swift; sourceTree = "<group>"; };
+		CEFB56EF23D230A500A64DA9 /* AUIMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AUIMapViewController.swift; sourceTree = "<group>"; };
+		CEFB56F023D230A500A64DA9 /* UniversityBuildings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UniversityBuildings.plist; sourceTree = "<group>"; };
+		CEFB56F523D230B500A64DA9 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,17 +83,56 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C220071D0690E80A3EB32995 /* Pods_KAI_v2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02EDB3B4B1E530CD2E5CDF05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63A0B5A07C36CBA10169E1CA /* Pods_KAI_v2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0BD85B91802C36CD3BE4863E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DE0C29BE0CDF79D8960B25E /* Pods-KAI_v2.debug.xcconfig */,
+				8B49B1C47D2F45DB1583AF4E /* Pods-KAI_v2.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CE009CAF241E58E40069862D /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CE009CB2241E592C0069862D /* NewsList.swift */,
+				CE009CBB241E8DAA0069862D /* NewsView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		CE009CBA241E8CBD0069862D /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				CE709DD523C504E100B1D537 /* LessonView.swift */,
+				CE709DD923C506AB00B1D537 /* ScheduleView.swift */,
+				CE6188BC23D77921000F263E /* ScheduleList.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
 		CE709DA923C4DF5D00B1D537 = {
 			isa = PBXGroup;
 			children = (
 				CE709DB423C4DF5D00B1D537 /* KAI_v2 */,
 				CE709DB323C4DF5D00B1D537 /* Products */,
+				0BD85B91802C36CD3BE4863E /* Pods */,
+				02EDB3B4B1E530CD2E5CDF05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +150,11 @@
 				CE709DB523C4DF5D00B1D537 /* AppDelegate.swift */,
 				CE709DB723C4DF5D00B1D537 /* SceneDelegate.swift */,
 				CE709DD323C4E37900B1D537 /* WebError.swift */,
+				CE05DB1323D4BEF9004A1E47 /* CurrentDay.swift */,
+				CEED6E4423EEB6D70080A6C3 /* DataState.swift */,
+				CE009CBA241E8CBD0069862D /* Schedule */,
+				CE009CAF241E58E40069862D /* News */,
+				CEFB56EC23D230A500A64DA9 /* Map */,
 				CE709DD723C5065600B1D537 /* ViewModels */,
 				CE709DD823C5065F00B1D537 /* Views */,
 				CE709DCC23C4DFD700B1D537 /* Services */,
@@ -106,8 +186,8 @@
 		CE709DCC23C4DFD700B1D537 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CE709DCF23C4E01C00B1D537 /* Schedule.swift */,
-				CE709DCD23C4DFE200B1D537 /* ScheduleService.swift */,
+				CEBCC75E23FAC82000B2AD8C /* News */,
+				CEBCC75D23FAC81200B2AD8C /* Schedule */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -116,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				CE709DD123C4E0B500B1D537 /* ScheduleViewModel.swift */,
+				CE009CB4241E599C0069862D /* NewsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,11 +205,42 @@
 			isa = PBXGroup;
 			children = (
 				CE709DB923C4DF5D00B1D537 /* ContentView.swift */,
-				CE709DD523C504E100B1D537 /* LessonView.swift */,
-				CE709DD923C506AB00B1D537 /* ScheduleView.swift */,
-				CEDD800723CD8C070014A9F3 /* ScheduleList.swift */,
+				CE05DB1523D4BF70004A1E47 /* WeekPicker.swift */,
+				CEED6E4623EEB7530080A6C3 /* LoadingView.swift */,
+				CE009CB6241E61350069862D /* WebView.swift */,
+				CEE3A129241EAC3E0045E5F9 /* SafariView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEBCC75D23FAC81200B2AD8C /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				CE709DCF23C4E01C00B1D537 /* Schedule.swift */,
+				CE709DCD23C4DFE200B1D537 /* ScheduleService.swift */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		CEBCC75E23FAC82000B2AD8C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CEBCC75F23FAC82B00B2AD8C /* NewsService.swift */,
+				CE009CB8241E6B400069862D /* NewsModel.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		CEFB56EC23D230A500A64DA9 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CEFB56F523D230B500A64DA9 /* MapView.swift */,
+				CEFB56ED23D230A500A64DA9 /* MapScreen.swift */,
+				CEFB56EE23D230A500A64DA9 /* UniversityBuildingAnnotation.swift */,
+				CEFB56EF23D230A500A64DA9 /* AUIMapViewController.swift */,
+				CEFB56F023D230A500A64DA9 /* UniversityBuildings.plist */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +250,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE709DC623C4DF5E00B1D537 /* Build configuration list for PBXNativeTarget "KAI_v2" */;
 			buildPhases = (
+				A8AEE5ADAC27EB47F0536A22 /* [CP] Check Pods Manifest.lock */,
 				CE709DAE23C4DF5D00B1D537 /* Sources */,
 				CE709DAF23C4DF5D00B1D537 /* Frameworks */,
 				CE709DB023C4DF5D00B1D537 /* Resources */,
+				8242026E72009492D335D378 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,11 +305,54 @@
 			files = (
 				CE709DC223C4DF5E00B1D537 /* LaunchScreen.storyboard in Resources */,
 				CE709DBF23C4DF5E00B1D537 /* Preview Assets.xcassets in Resources */,
+				CEFB56F423D230A500A64DA9 /* UniversityBuildings.plist in Resources */,
 				CE709DBC23C4DF5E00B1D537 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8242026E72009492D335D378 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KAI_v2/Pods-KAI_v2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KAI_v2/Pods-KAI_v2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KAI_v2/Pods-KAI_v2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8AEE5ADAC27EB47F0536A22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KAI_v2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE709DAE23C4DF5D00B1D537 /* Sources */ = {
@@ -203,16 +360,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE709DD023C4E01C00B1D537 /* Schedule.swift in Sources */,
+				CEFB56F623D230B500A64DA9 /* MapView.swift in Sources */,
+				CEE3A12A241EAC3E0045E5F9 /* SafariView.swift in Sources */,
 				CE709DD623C504E100B1D537 /* LessonView.swift in Sources */,
+				CEBCC76023FAC82B00B2AD8C /* NewsService.swift in Sources */,
+				CE009CB9241E6B400069862D /* NewsModel.swift in Sources */,
+				CE009CB3241E592C0069862D /* NewsList.swift in Sources */,
 				CE709DD423C4E37900B1D537 /* WebError.swift in Sources */,
+				CEFB56F123D230A500A64DA9 /* MapScreen.swift in Sources */,
 				CE709DB623C4DF5D00B1D537 /* AppDelegate.swift in Sources */,
+				CEFB56F323D230A500A64DA9 /* AUIMapViewController.swift in Sources */,
+				CE009CB7241E61350069862D /* WebView.swift in Sources */,
+				CE05DB1623D4BF70004A1E47 /* WeekPicker.swift in Sources */,
 				CE709DCE23C4DFE200B1D537 /* ScheduleService.swift in Sources */,
+				CE009CBC241E8DAA0069862D /* NewsView.swift in Sources */,
 				CE709DDA23C506AB00B1D537 /* ScheduleView.swift in Sources */,
+				CE05DB1423D4BEF9004A1E47 /* CurrentDay.swift in Sources */,
+				CEED6E4523EEB6D70080A6C3 /* DataState.swift in Sources */,
+				CE009CB5241E599C0069862D /* NewsViewModel.swift in Sources */,
 				CE709DD223C4E0B500B1D537 /* ScheduleViewModel.swift in Sources */,
+				CEED6E4723EEB7530080A6C3 /* LoadingView.swift in Sources */,
+				CEFB56F223D230A500A64DA9 /* UniversityBuildingAnnotation.swift in Sources */,
 				CE709DB823C4DF5D00B1D537 /* SceneDelegate.swift in Sources */,
 				CE709DCA23C4DF9D00B1D537 /* API.swift in Sources */,
+				CE6188BD23D77921000F263E /* ScheduleList.swift in Sources */,
 				CE709DBA23C4DF5D00B1D537 /* ContentView.swift in Sources */,
-				CEDD800823CD8C070014A9F3 /* ScheduleList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +518,7 @@
 		};
 		CE709DC723C4DF5E00B1D537 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DE0C29BE0CDF79D8960B25E /* Pods-KAI_v2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -353,6 +526,7 @@
 				DEVELOPMENT_TEAM = VJF6DVN6AZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = KAI_v2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -366,6 +540,7 @@
 		};
 		CE709DC823C4DF5E00B1D537 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B49B1C47D2F45DB1583AF4E /* Pods-KAI_v2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -373,6 +548,7 @@
 				DEVELOPMENT_TEAM = VJF6DVN6AZ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = KAI_v2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

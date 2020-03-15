@@ -9,21 +9,21 @@
 import SwiftUI
 import Combine
 
-class LessonViewModel: ObservableObject, Identifiable {
+class LessonViewModel: Identifiable {
     
     // MARK: - Properties
     
     let id = UUID()
     
-    @Published var dayDate: String
-    @Published var audNum: String
-    @Published var buildNum: String
-    @Published var dayTime: String
-    @Published var disciplType: String
-    @Published var disciplTypeShort: String
-    @Published var disciplName: String
-    @Published var prepodName: String
-    @Published var prepodEmoji: String
+    var dayDate: String
+    var audNum: String
+    var buildNum: String
+    var dayTime: String
+    var disciplType: String
+    var disciplTypeShort: String
+    var disciplName: String
+    var prepodName: String
+    var prepodEmoji: String
     
     private let responseModel: LessonResponseModel
     
@@ -58,7 +58,7 @@ class LessonViewModel: ObservableObject, Identifiable {
     }
 }
 
-class DayScheduleViewModel: ObservableObject, Identifiable {
+class DayScheduleViewModel: Identifiable {
     
     // MARK: - Properties
     
@@ -84,17 +84,21 @@ enum WeekDay: String {
     case saturday = "Суббота"
 }
 
-enum WeekType: Hashable {
-    case even
-    case odd
+enum WeekType: String, Hashable {
+    case even = "чет"
+    case odd = "неч"
+    
+    var opposite: WeekType {
+        return self == .even ? .odd : .even
+    }
 }
 
 class ScheduleViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    @Published var evenSchedules: [DayScheduleViewModel] = []
-    @Published var oddSchedules: [DayScheduleViewModel] = []
+    @Published var state: DataState = .initial
+    @Published var schedules: [DayScheduleViewModel] = []
     
     private var scheduleResponseModel: ScheduleResponseModel? {
         didSet {
@@ -112,11 +116,7 @@ class ScheduleViewModel: ObservableObject {
             let saturday = DayScheduleViewModel(day: .saturday,
                                                 lessons: responseModel.saturday.map { LessonViewModel(responseModel: $0)})
             
-            let daySchedules = [monday, tuesday, wednesday, thursday, friday, saturday]
-            
-            evenSchedules = daySchedules.map { schedule in DayScheduleViewModel(day: schedule.day, lessons: schedule.lessons.filter { $0.dayDate != "неч" })}
-            oddSchedules = daySchedules.map { schedule in DayScheduleViewModel(day: schedule.day, lessons: schedule.lessons.filter { $0.dayDate != "чет" })}
-            
+            schedules = [monday, tuesday, wednesday, thursday, friday, saturday]
         }
     }
     
@@ -130,11 +130,17 @@ class ScheduleViewModel: ObservableObject {
     }
     
     func loadSchedule(for groupNumber: String) {
+        state = .loading
         scheduleService.requestGroupId(groupNumber: groupNumber, success: { [weak self] groupIdResponseModel in
             guard let gruopId = groupIdResponseModel.first?.id else { return }
             self?.scheduleService.requestSchedule(for: String(gruopId), success: { scheduleResponseModel in
+                self?.state = .loaded
                 self?.scheduleResponseModel = scheduleResponseModel
-            }, failure: { error in })
-            }, failure: { error in })
+            }, failure: { [weak self] error in
+                self?.state = .failed
+            })
+            }, failure: { [weak self] error in
+                self?.state = .failed
+        })
     }
 }
