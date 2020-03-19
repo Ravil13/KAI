@@ -10,6 +10,10 @@ import Combine
 
 class NewsViewModel: ObservableObject {
     
+    @Published var isLoading = false
+    @Published var isNextPageLoading = false
+    @Published var showingError = false
+    @Published var errorMessage = "Что-то пошло не так"
     @Published var news: [NewsModel] = []
     
     private var page: Int = 1
@@ -22,11 +26,22 @@ class NewsViewModel: ObservableObject {
     }
     
     func loadNews() {
+        if page == 1 {
+            isLoading = true
+        } else {
+            isNextPageLoading = true
+        }
+        showingError = false
         service.requestNews(page: page, success: { news in
             self.news.append(contentsOf: news)
             self.page += 1
+            self.isLoading = false
+            self.isNextPageLoading = false
         }, failure: { error in
-            print(error)
+            self.isLoading = false
+            self.isNextPageLoading = false
+            self.showingError = true
+            self.errorMessage = error.localizedDescription
         })
     }
 }

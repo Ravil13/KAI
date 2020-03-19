@@ -31,7 +31,6 @@
 		CE709DDA23C506AB00B1D537 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD923C506AB00B1D537 /* ScheduleView.swift */; };
 		CEBCC76023FAC82B00B2AD8C /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCC75F23FAC82B00B2AD8C /* NewsService.swift */; };
 		CEE3A12A241EAC3E0045E5F9 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3A129241EAC3E0045E5F9 /* SafariView.swift */; };
-		CEED6E4523EEB6D70080A6C3 /* DataState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6E4423EEB6D70080A6C3 /* DataState.swift */; };
 		CEED6E4723EEB7530080A6C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6E4623EEB7530080A6C3 /* LoadingView.swift */; };
 		CEFB56F123D230A500A64DA9 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB56ED23D230A500A64DA9 /* MapScreen.swift */; };
 		CEFB56F223D230A500A64DA9 /* UniversityBuildingAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB56EE23D230A500A64DA9 /* UniversityBuildingAnnotation.swift */; };
@@ -69,7 +68,6 @@
 		CE709DD923C506AB00B1D537 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		CEBCC75F23FAC82B00B2AD8C /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		CEE3A129241EAC3E0045E5F9 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
-		CEED6E4423EEB6D70080A6C3 /* DataState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataState.swift; sourceTree = "<group>"; };
 		CEED6E4623EEB7530080A6C3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CEFB56ED23D230A500A64DA9 /* MapScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
 		CEFB56EE23D230A500A64DA9 /* UniversityBuildingAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UniversityBuildingAnnotation.swift; sourceTree = "<group>"; };
@@ -110,8 +108,10 @@
 		CE009CAF241E58E40069862D /* News */ = {
 			isa = PBXGroup;
 			children = (
-				CE009CB2241E592C0069862D /* NewsList.swift */,
-				CE009CBB241E8DAA0069862D /* NewsView.swift */,
+				CED7232424239C4A00440701 /* Model */,
+				CED7232324239C4100440701 /* Service */,
+				CED7232224239C3400440701 /* ViewModel */,
+				CED7232124239C2E00440701 /* Views */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -119,9 +119,10 @@
 		CE009CBA241E8CBD0069862D /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
-				CE709DD523C504E100B1D537 /* LessonView.swift */,
-				CE709DD923C506AB00B1D537 /* ScheduleView.swift */,
-				CE6188BC23D77921000F263E /* ScheduleList.swift */,
+				CED7232024239C0A00440701 /* Model */,
+				CED7231F24239BF400440701 /* Service */,
+				CED7231E24239BD700440701 /* ViewModel */,
+				CED7231D24239BCF00440701 /* Views */,
 			);
 			path = Schedule;
 			sourceTree = "<group>";
@@ -151,13 +152,10 @@
 				CE709DB723C4DF5D00B1D537 /* SceneDelegate.swift */,
 				CE709DD323C4E37900B1D537 /* WebError.swift */,
 				CE05DB1323D4BEF9004A1E47 /* CurrentDay.swift */,
-				CEED6E4423EEB6D70080A6C3 /* DataState.swift */,
 				CE009CBA241E8CBD0069862D /* Schedule */,
 				CE009CAF241E58E40069862D /* News */,
 				CEFB56EC23D230A500A64DA9 /* Map */,
-				CE709DD723C5065600B1D537 /* ViewModels */,
 				CE709DD823C5065F00B1D537 /* Views */,
-				CE709DCC23C4DFD700B1D537 /* Services */,
 				CE709DCB23C4DFB000B1D537 /* API */,
 				CE709DBB23C4DF5E00B1D537 /* Assets.xcassets */,
 				CE709DC023C4DF5E00B1D537 /* LaunchScreen.storyboard */,
@@ -183,29 +181,10 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		CE709DCC23C4DFD700B1D537 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				CEBCC75E23FAC82000B2AD8C /* News */,
-				CEBCC75D23FAC81200B2AD8C /* Schedule */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		CE709DD723C5065600B1D537 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-				CE709DD123C4E0B500B1D537 /* ScheduleViewModel.swift */,
-				CE009CB4241E599C0069862D /* NewsViewModel.swift */,
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		CE709DD823C5065F00B1D537 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CE709DB923C4DF5D00B1D537 /* ContentView.swift */,
-				CE05DB1523D4BF70004A1E47 /* WeekPicker.swift */,
 				CEED6E4623EEB7530080A6C3 /* LoadingView.swift */,
 				CE009CB6241E61350069862D /* WebView.swift */,
 				CEE3A129241EAC3E0045E5F9 /* SafariView.swift */,
@@ -213,22 +192,72 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CEBCC75D23FAC81200B2AD8C /* Schedule */ = {
+		CED7231D24239BCF00440701 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE05DB1523D4BF70004A1E47 /* WeekPicker.swift */,
+				CE709DD523C504E100B1D537 /* LessonView.swift */,
+				CE6188BC23D77921000F263E /* ScheduleList.swift */,
+				CE709DD923C506AB00B1D537 /* ScheduleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CED7231E24239BD700440701 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE709DD123C4E0B500B1D537 /* ScheduleViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CED7231F24239BF400440701 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CE709DCD23C4DFE200B1D537 /* ScheduleService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CED7232024239C0A00440701 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				CE709DCF23C4E01C00B1D537 /* Schedule.swift */,
-				CE709DCD23C4DFE200B1D537 /* ScheduleService.swift */,
 			);
-			path = Schedule;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		CEBCC75E23FAC82000B2AD8C /* News */ = {
+		CED7232124239C2E00440701 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE009CB2241E592C0069862D /* NewsList.swift */,
+				CE009CBB241E8DAA0069862D /* NewsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CED7232224239C3400440701 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE009CB4241E599C0069862D /* NewsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CED7232324239C4100440701 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 				CEBCC75F23FAC82B00B2AD8C /* NewsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CED7232424239C4A00440701 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				CE009CB8241E6B400069862D /* NewsModel.swift */,
 			);
-			path = News;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		CEFB56EC23D230A500A64DA9 /* Map */ = {
@@ -376,7 +405,6 @@
 				CE009CBC241E8DAA0069862D /* NewsView.swift in Sources */,
 				CE709DDA23C506AB00B1D537 /* ScheduleView.swift in Sources */,
 				CE05DB1423D4BEF9004A1E47 /* CurrentDay.swift in Sources */,
-				CEED6E4523EEB6D70080A6C3 /* DataState.swift in Sources */,
 				CE009CB5241E599C0069862D /* NewsViewModel.swift in Sources */,
 				CE709DD223C4E0B500B1D537 /* ScheduleViewModel.swift in Sources */,
 				CEED6E4723EEB7530080A6C3 /* LoadingView.swift in Sources */,

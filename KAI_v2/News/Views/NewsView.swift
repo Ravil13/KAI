@@ -23,21 +23,21 @@ struct NewsView: View {
             Text(newsModel.date ?? "")
                 .font(.title)
                 .foregroundColor(.blue)
-                .padding(.leading)
+                .padding(.horizontal)
             
             Text(newsModel.title ?? "")
                 .font(.headline)
-                .padding(.leading)
+                .padding(.horizontal)
             
             Text(newsModel.subtitle ?? "")
-                .padding(.leading)
+                .padding(.horizontal)
             
             Text("Автор: ")
                 .foregroundColor(.gray)
-                .padding(.leading)
+                .padding(.horizontal)
             
             Text(newsModel.author ?? "")
-                .padding(.leading)
+                .padding(.horizontal)
                 .padding(.bottom)
         }
         .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
