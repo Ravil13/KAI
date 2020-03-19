@@ -13,21 +13,13 @@ struct ScheduleView: View {
     @ObservedObject var viewModel: ScheduleViewModel
     @State private var weekType: WeekType = CurrentDay.weekType
     
-    var isLoading: Bool {
-        viewModel.state == .loading
-    }
-    
-    var isFailed: Bool {
-        viewModel.state == .failed
-    }
-    
     var body: some View {
         NavigationView {
-            if isLoading {
+            if viewModel.isLoading {
                 LoadingView()
             }
             
-            if isFailed {
+            if viewModel.showingError {
                 VStack(alignment: .center) {              
                     Text("При загрзке данных произошла ошибка, попробуйте позже")
                 }

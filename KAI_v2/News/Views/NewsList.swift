@@ -15,17 +15,32 @@ struct NewsList: View {
     var body: some View {
         NavigationView {
             List {
+                
+                if viewModel.isLoading {
+                    LoadingView()
+                }
+                
                 ForEach(viewModel.news) { newsModel in
                     NewsView(newsModel: newsModel)
                 }
                 
                 Button(action: {
                     self.viewModel.loadNews()
-                }, label: {
-                    Text("Загрузить еще")
-                })
+                }) {
+                    if viewModel.isNextPageLoading {
+                        Text("Загружаю")
+                    } else {
+                        Text("Загрузить еще")
+                    }
+                }.disabled(viewModel.isNextPageLoading)
             }
             .navigationBarTitle("Новости")
+            
+            .alert(isPresented: $viewModel.showingError) {
+                Alert(title: Text("Упс"),
+                      message: Text(viewModel.errorMessage),
+                      dismissButton: nil)
+            }
         }
     }
 }

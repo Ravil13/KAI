@@ -97,24 +97,26 @@ class ScheduleViewModel: ObservableObject {
     
     // MARK: - Properties
     
-    @Published var state: DataState = .initial
+    @Published var isLoading = false
+    @Published var showingError = false
+    @Published var errorMessage = "Что-то пошло не так"
     @Published var schedules: [DayScheduleViewModel] = []
     
     private var scheduleResponseModel: ScheduleResponseModel? {
         didSet {
             guard let responseModel = scheduleResponseModel else { return }
-            let monday = DayScheduleViewModel(day: .monday,
-                                              lessons: responseModel.monday.map { LessonViewModel(responseModel: $0)})
-            let tuesday = DayScheduleViewModel(day: .tuesday,
-                                               lessons: responseModel.tuesday.map { LessonViewModel(responseModel: $0)})
+            let monday    = DayScheduleViewModel(day: .monday,
+                                                 lessons: responseModel.monday.map { LessonViewModel(responseModel: $0)})
+            let tuesday   = DayScheduleViewModel(day: .tuesday,
+                                                 lessons: responseModel.tuesday.map { LessonViewModel(responseModel: $0)})
             let wednesday = DayScheduleViewModel(day: .wednesday,
                                                  lessons: responseModel.wednesday.map { LessonViewModel(responseModel: $0)})
-            let thursday = DayScheduleViewModel(day: .thursday,
-                                                lessons: responseModel.thursday.map { LessonViewModel(responseModel: $0)})
-            let friday = DayScheduleViewModel(day: .friday,
-                                              lessons: responseModel.friday.map { LessonViewModel(responseModel: $0)})
-            let saturday = DayScheduleViewModel(day: .saturday,
-                                                lessons: responseModel.saturday.map { LessonViewModel(responseModel: $0)})
+            let thursday  = DayScheduleViewModel(day: .thursday,
+                                                 lessons: responseModel.thursday.map { LessonViewModel(responseModel: $0)})
+            let friday    = DayScheduleViewModel(day: .friday,
+                                                 lessons: responseModel.friday.map { LessonViewModel(responseModel: $0)})
+            let saturday  = DayScheduleViewModel(day: .saturday,
+                                                 lessons: responseModel.saturday.map { LessonViewModel(responseModel: $0)})
             
             schedules = [monday, tuesday, wednesday, thursday, friday, saturday]
         }
@@ -130,17 +132,20 @@ class ScheduleViewModel: ObservableObject {
     }
     
     func loadSchedule(for groupNumber: String) {
-        state = .loading
+        isLoading = true
+        showingError = false
         scheduleService.requestGroupId(groupNumber: groupNumber, success: { [weak self] groupIdResponseModel in
             guard let gruopId = groupIdResponseModel.first?.id else { return }
-            self?.scheduleService.requestSchedule(for: String(gruopId), success: { scheduleResponseModel in
-                self?.state = .loaded
-                self?.scheduleResponseModel = scheduleResponseModel
-            }, failure: { [weak self] error in
-                self?.state = .failed
+                self?.scheduleService.requestSchedule(for: String(gruopId), success: { scheduleResponseModel in
+                    self?.scheduleResponseModel = scheduleResponseModel
+                    self?.isLoading = false
+                }, failure: { [weak self] error in
+                    self?.isLoading = false
+                    self?.showingError = true
             })
             }, failure: { [weak self] error in
-                self?.state = .failed
+                self?.isLoading = false
+                self?.showingError = true
         })
     }
 }
