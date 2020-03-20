@@ -10,43 +10,29 @@ import SwiftUI
 
 struct NewsList: View {
     
-    @ObservedObject private var viewModel = NewsViewModel()
+    @ObservedObject var viewModel: NewsViewModel
     
     var body: some View {
-        NavigationView {
-            List {
-                
-                if viewModel.isLoading {
-                    LoadingView()
-                }
-                
-                ForEach(viewModel.news) { newsModel in
-                    NewsView(newsModel: newsModel)
-                }
-                
-                Button(action: {
-                    self.viewModel.loadNews()
-                }) {
-                    if viewModel.isNextPageLoading {
-                        Text("Загружаю")
-                    } else {
-                        Text("Загрузить еще")
-                    }
-                }.disabled(viewModel.isNextPageLoading)
+        List {
+            ForEach(viewModel.news) { newsModel in
+                NewsCellView(newsModel: newsModel)
             }
-            .navigationBarTitle("Новости")
             
-            .alert(isPresented: $viewModel.showingError) {
-                Alert(title: Text("Упс"),
-                      message: Text(viewModel.errorMessage),
-                      dismissButton: nil)
-            }
+            Button(action: {
+                self.viewModel.loadNews()
+            }) {
+                if viewModel.isNextPageLoading {
+                    Text("Загружаю")
+                } else {
+                    Text("Загрузить еще")
+                }
+            }.disabled(viewModel.isNextPageLoading)
         }
     }
 }
 
 struct NewsList_Previews: PreviewProvider {
     static var previews: some View {
-        NewsList()
+        NewsList(viewModel: NewsViewModel())
     }
 }

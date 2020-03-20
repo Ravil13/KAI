@@ -20,59 +20,10 @@ enum API {
     
     // MARK: - Private Methods
     
-    /// Generic request method
-    static func request<T: Decodable>(endpoint: Endpoint,
-                                      additionalParameters: [String: String]? = nil,
-                                      success: @escaping (T) -> Void,
-                                      failure: @escaping ErrorClouser) {
-        
-        guard var urlComponents = endpoint.urlComponents else { return }
-        
-        var parameters = endpoint.parameters ?? [:]
-        parameters.merge(additionalParameters ?? [:]) { (_, new) in new }
-        
-        urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
-        
-        guard let url = urlComponents.url else { return }
-        
-        print("REQUEST: \(url.absoluteString)")
-        
-        let task = URLSession.shared.dataTask(with: URLRequest(url: url)) { data, response, error in
-            if let error = error as NSError? {
-                print("ERROR: \(error.localizedDescription)")
-                failure(error)
-                return
-            }
-            
-            guard let data = data else {
-                print("NO DATA")
-                failure(WebError.somethingWentWrong)
-                return
-            }
-            
-            let jsonDecoder = JSONDecoder()
-            
-            do {
-                let object = try jsonDecoder.decode(T.self, from: data)
-                DispatchQueue.main.async {
-                    print(object)
-                    success(object)
-                }
-            } catch(let error as NSError) {
-                DispatchQueue.main.async {
-                    print("PARSE ERROR: \(error.localizedDescription)")
-                    failure(error)
-                }
-            }
-        }
-        
-        task.resume()
-    }
-    
-    static func requestHTML(endpoint: Endpoint,
-                            additionalParameters: [String: String]? = nil,
-                            success: @escaping (String) -> Void,
-                            failure: @escaping ErrorClouser) {
+    private static func request(endpoint: Endpoint,
+                                additionalParameters: [String: String]? = nil,
+                                success: @escaping (Data) -> Void,
+                                failure: @escaping ErrorClouser)  {
         
         guard var urlComponents = endpoint.urlComponents else { return }
         
@@ -93,16 +44,51 @@ enum API {
                     return
                 }
                 
-                guard let data = data, let html = String(data: data, encoding: .utf8) else {
+                guard let data = data else {
                     print("NO DATA")
                     failure(WebError.somethingWentWrong)
                     return
                 }
                 
-                success(html)
+                success(data)
             }
         }
         
         task.resume()
+    }
+    
+    /// Generic request method
+    static func request<T: Decodable>(endpoint: Endpoint,
+                                      additionalParameters: [String: String]? = nil,
+                                      success: @escaping (T) -> Void,
+                                      failure: @escaping ErrorClouser) {
+        
+        self.request(endpoint: endpoint, success: { data in
+            let jsonDecoder = JSONDecoder()
+            
+            do {
+                let object = try jsonDecoder.decode(T.self, from: data)
+                print(object)
+                success(object)
+            } catch(let error as NSError) {
+                print("PARSE ERROR: \(error.localizedDescription)")
+                failure(error)
+            }
+        }, failure: failure)
+    }
+    
+    static func requestHTML(endpoint: Endpoint,
+                            additionalParameters: [String: String]? = nil,
+                            success: @escaping (String) -> Void,
+                            failure: @escaping ErrorClouser) {
+        
+        request(endpoint: endpoint, success: { data in
+            if let html = String(data: data, encoding: .utf8) {
+                success(html)
+            } else {
+                print("Data doesn't contains a string value")
+                failure(WebError.badResponse)
+            }
+        }, failure: failure)
     }
 }
