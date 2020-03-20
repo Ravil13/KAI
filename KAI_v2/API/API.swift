@@ -12,8 +12,8 @@ import SwiftSoup
 typealias ErrorClouser = (NSError) -> Void
 
 protocol Endpoint {
-    var urlComponents: URLComponents? { get }
-    var parameters: [String: String]? { get }
+    var urlComponents: URLComponents { get }
+    var parameters: [String: String] { get }
 }
 
 enum API {
@@ -25,14 +25,17 @@ enum API {
                                 success: @escaping (Data) -> Void,
                                 failure: @escaping ErrorClouser)  {
         
-        guard var urlComponents = endpoint.urlComponents else { return }
+        var urlComponents = endpoint.urlComponents
         
-        var parameters = endpoint.parameters ?? [:]
+        var parameters = endpoint.parameters
         parameters.merge(additionalParameters ?? [:]) { (_, new) in new }
         
         urlComponents.queryItems = parameters.map { URLQueryItem(name: $0.key, value: $0.value) }
         
-        guard let url = urlComponents.url else { return }
+        guard let url = urlComponents.url else {
+            failure(WebError.somethingWentWrong)
+            return
+        }
         
         print("REQUEST: \(url.absoluteString)")
         
