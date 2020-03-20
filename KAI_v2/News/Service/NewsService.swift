@@ -20,7 +20,7 @@ enum NewsEndpoint: Endpoint {
         }
     }
     
-    var parameters: [String: String]? {
+    var parameters: [String: String] {
         switch self {
         case .news(let page):
             return ["p_p_id": "56_INSTANCE_auCw7LKENgM7",

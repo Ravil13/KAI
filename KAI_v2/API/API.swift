@@ -12,7 +12,7 @@ import SwiftSoup
 typealias ErrorClouser = (NSError) -> Void
 
 protocol Endpoint {
-    var urlComponents: URLComponents { get }
+    var urlComponents: URLComponents? { get }
     var parameters: [String: String] { get }
 }
 
@@ -25,7 +25,10 @@ enum API {
                                 success: @escaping (Data) -> Void,
                                 failure: @escaping ErrorClouser)  {
         
-        var urlComponents = endpoint.urlComponents
+        guard var urlComponents = endpoint.urlComponents else {
+            failure(WebError.somethingWentWrong)
+            return
+        }
         
         var parameters = endpoint.parameters
         parameters.merge(additionalParameters ?? [:]) { (_, new) in new }

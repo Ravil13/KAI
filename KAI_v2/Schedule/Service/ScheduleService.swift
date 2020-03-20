@@ -20,7 +20,7 @@ enum ScheduleEndpoint: Endpoint {
         }
     }
     
-    var parameters: [String: String]? {
+    var parameters: [String: String] {
         switch self {
         case .groupId(let groupNumber):
             return ["p_p_id": "pubStudentSchedule_WAR_publicStudentSchedule10",
