@@ -10,8 +10,21 @@ import SwiftUI
 
 struct ScheduleView: View {
     
+    @EnvironmentObject var userData: UserData
+    
     @ObservedObject var viewModel: ScheduleViewModel
     @State private var weekType: WeekType = CurrentDay.weekType
+    @State var showingProfile = false
+    
+    var profileButton: some View {
+        Button(action: { self.showingProfile.toggle() }) {
+            Image(systemName: "person.crop.circle")
+                .imageScale(.large)
+                .accessibility(label: Text("User Profile"))
+                .padding()
+        }
+    }
+
     
     var body: some View {
         NavigationView {
@@ -21,7 +34,7 @@ struct ScheduleView: View {
             
             if viewModel.showingError {
                 VStack(alignment: .center) {              
-                    Text("При загрзке данных произошла ошибка, попробуйте позже")
+                    Text("При загрузке данных произошла ошибка, попробуйте позже")
                 }
             }
             
@@ -30,6 +43,11 @@ struct ScheduleView: View {
                 ScheduleList(schedules: viewModel.schedules, weekType: weekType)
             }
             .navigationBarTitle("Расписание")
+            .navigationBarItems(trailing: profileButton)
+            .sheet(isPresented: $showingProfile) {
+                ProfileHost()
+                    .environmentObject(self.userData)
+            }
         }
     }
 }

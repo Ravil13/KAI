@@ -16,6 +16,7 @@ struct ContentView: View {
                     Image(systemName: "calendar")
                     Text("Расписание")
             }
+            .environmentObject(UserData())
             
             NewsView()
                 .tabItem {
@@ -28,12 +29,7 @@ struct ContentView: View {
                     Image(systemName: "map")
                     Text("Карта")
             }
-            
-            Text("Настройки")
-                .tabItem {
-                    Image(systemName: "gear")
-                    Text("Настройки")
-            }
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }

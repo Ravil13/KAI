@@ -21,12 +21,12 @@ struct NewsList: View {
             Button(action: {
                 self.viewModel.loadNews()
             }) {
-                if viewModel.isNextPageLoading {
+                if viewModel.isNextPageLoading || viewModel.isLoading {
                     Text("Загружаю")
                 } else {
                     Text("Загрузить еще")
                 }
-            }.disabled(viewModel.isNextPageLoading)
+            }.disabled(viewModel.isNextPageLoading || viewModel.isLoading)
         }
     }
 }
