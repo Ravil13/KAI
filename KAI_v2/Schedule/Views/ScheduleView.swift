@@ -10,8 +10,6 @@ import SwiftUI
 
 struct ScheduleView: View {
     
-    @EnvironmentObject var userData: UserData
-    
     @ObservedObject var viewModel: ScheduleViewModel
     @State private var weekType: WeekType = CurrentDay.weekType
     @State var showingProfile = false
@@ -45,8 +43,10 @@ struct ScheduleView: View {
             .navigationBarTitle("Расписание")
             .navigationBarItems(trailing: profileButton)
             .sheet(isPresented: $showingProfile) {
-                ProfileHost()
-                    .environmentObject(self.userData)
+                ProfileView()
+                    .onDisappear {
+                        self.viewModel.loadSchedule(for: UserDefaults.standard.string(forKey: "group") ?? "")
+                }
             }
         }
     }

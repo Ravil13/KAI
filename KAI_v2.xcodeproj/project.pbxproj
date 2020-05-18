@@ -15,11 +15,7 @@
 		CE009CBC241E8DAA0069862D /* NewsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE009CBB241E8DAA0069862D /* NewsCellView.swift */; };
 		CE05DB1423D4BEF9004A1E47 /* CurrentDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05DB1323D4BEF9004A1E47 /* CurrentDay.swift */; };
 		CE05DB1623D4BF70004A1E47 /* WeekPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE05DB1523D4BF70004A1E47 /* WeekPicker.swift */; };
-		CE2E258024695A5700CFF957 /* ProfileHost.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E257F24695A5700CFF957 /* ProfileHost.swift */; };
-		CE2E258224695BF200CFF957 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E258124695BF200CFF957 /* Profile.swift */; };
-		CE2E258424695E0C00CFF957 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E258324695E0C00CFF957 /* UserData.swift */; };
-		CE2E258624695EB100CFF957 /* ProfileSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E258524695EB100CFF957 /* ProfileSummary.swift */; };
-		CE2E25882469866700CFF957 /* ProfileEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E25872469866700CFF957 /* ProfileEditor.swift */; };
+		CE49B04324732B9A00DF5010 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE49B04224732B9A00DF5010 /* ProfileView.swift */; };
 		CE6188BD23D77921000F263E /* ScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6188BC23D77921000F263E /* ScheduleList.swift */; };
 		CE709DB623C4DF5D00B1D537 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DB523C4DF5D00B1D537 /* AppDelegate.swift */; };
 		CE709DB823C4DF5D00B1D537 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DB723C4DF5D00B1D537 /* SceneDelegate.swift */; };
@@ -56,11 +52,7 @@
 		CE009CBB241E8DAA0069862D /* NewsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellView.swift; sourceTree = "<group>"; };
 		CE05DB1323D4BEF9004A1E47 /* CurrentDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentDay.swift; sourceTree = "<group>"; };
 		CE05DB1523D4BF70004A1E47 /* WeekPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPicker.swift; sourceTree = "<group>"; };
-		CE2E257F24695A5700CFF957 /* ProfileHost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHost.swift; sourceTree = "<group>"; };
-		CE2E258124695BF200CFF957 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		CE2E258324695E0C00CFF957 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		CE2E258524695EB100CFF957 /* ProfileSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSummary.swift; sourceTree = "<group>"; };
-		CE2E25872469866700CFF957 /* ProfileEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditor.swift; sourceTree = "<group>"; };
+		CE49B04224732B9A00DF5010 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		CE6188BC23D77921000F263E /* ScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleList.swift; sourceTree = "<group>"; };
 		CE709DB223C4DF5D00B1D537 /* КАИ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "КАИ.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE709DB523C4DF5D00B1D537 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,9 +134,7 @@
 		CE2E257E24695A3400CFF957 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				CE2E257F24695A5700CFF957 /* ProfileHost.swift */,
-				CE2E258524695EB100CFF957 /* ProfileSummary.swift */,
-				CE2E25872469866700CFF957 /* ProfileEditor.swift */,
+				CE49B04224732B9A00DF5010 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -174,8 +164,6 @@
 				CE709DB723C4DF5D00B1D537 /* SceneDelegate.swift */,
 				CE709DD323C4E37900B1D537 /* WebError.swift */,
 				CE05DB1323D4BEF9004A1E47 /* CurrentDay.swift */,
-				CE2E258124695BF200CFF957 /* Profile.swift */,
-				CE2E258324695E0C00CFF957 /* UserData.swift */,
 				CE009CBA241E8CBD0069862D /* Schedule */,
 				CE009CAF241E58E40069862D /* News */,
 				CEFB56EC23D230A500A64DA9 /* Map */,
@@ -416,15 +404,12 @@
 			files = (
 				CE709DD023C4E01C00B1D537 /* Schedule.swift in Sources */,
 				CEFB56F623D230B500A64DA9 /* MapView.swift in Sources */,
-				CE2E258624695EB100CFF957 /* ProfileSummary.swift in Sources */,
 				CEE3A12A241EAC3E0045E5F9 /* SafariView.swift in Sources */,
 				CE709DD623C504E100B1D537 /* LessonView.swift in Sources */,
 				CEBCC76023FAC82B00B2AD8C /* NewsService.swift in Sources */,
 				CE009CB9241E6B400069862D /* NewsModel.swift in Sources */,
-				CE2E25882469866700CFF957 /* ProfileEditor.swift in Sources */,
 				CE009CB3241E592C0069862D /* NewsList.swift in Sources */,
 				CEC099E42425477000C8DE3E /* NewsView.swift in Sources */,
-				CE2E258024695A5700CFF957 /* ProfileHost.swift in Sources */,
 				CE709DD423C4E37900B1D537 /* WebError.swift in Sources */,
 				CEFB56F123D230A500A64DA9 /* MapScreen.swift in Sources */,
 				CE709DB623C4DF5D00B1D537 /* AppDelegate.swift in Sources */,
@@ -433,12 +418,11 @@
 				CE05DB1623D4BF70004A1E47 /* WeekPicker.swift in Sources */,
 				CE709DCE23C4DFE200B1D537 /* ScheduleService.swift in Sources */,
 				CE009CBC241E8DAA0069862D /* NewsCellView.swift in Sources */,
-				CE2E258224695BF200CFF957 /* Profile.swift in Sources */,
 				CE709DDA23C506AB00B1D537 /* ScheduleView.swift in Sources */,
 				CE05DB1423D4BEF9004A1E47 /* CurrentDay.swift in Sources */,
 				CE009CB5241E599C0069862D /* NewsViewModel.swift in Sources */,
 				CE709DD223C4E0B500B1D537 /* ScheduleViewModel.swift in Sources */,
-				CE2E258424695E0C00CFF957 /* UserData.swift in Sources */,
+				CE49B04324732B9A00DF5010 /* ProfileView.swift in Sources */,
 				CEED6E4723EEB7530080A6C3 /* LoadingView.swift in Sources */,
 				CEFB56F223D230A500A64DA9 /* UniversityBuildingAnnotation.swift in Sources */,
 				CE709DB823C4DF5D00B1D537 /* SceneDelegate.swift in Sources */,

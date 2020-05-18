@@ -16,7 +16,6 @@ struct ContentView: View {
                     Image(systemName: "calendar")
                     Text("Расписание")
             }
-            .environmentObject(UserData())
             
             NewsView()
                 .tabItem {
