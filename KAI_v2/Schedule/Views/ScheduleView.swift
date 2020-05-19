@@ -12,7 +12,7 @@ struct ScheduleView: View {
     
     @ObservedObject var viewModel: ScheduleViewModel
     @State private var weekType: WeekType = CurrentDay.weekType
-    @State var showingProfile = false
+    @State var showingProfile = UserDefaults.standard.string(forKey: "group") == nil
     
     var profileButton: some View {
         Button(action: { self.showingProfile.toggle() }) {

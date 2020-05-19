@@ -36,7 +36,9 @@ struct ProfileView: View {
             HStack {
                 Text("Группа: ")
                 Spacer()
-                TextField("Группа", text: $group)
+                TextField("Группа", text: $group, onEditingChanged: { _ in
+                    UserDefaults.standard.set(self.group, forKey: "group")
+                })
             }
         }.onDisappear {
             UserDefaults.standard.set(self.name, forKey: "name")
