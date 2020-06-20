@@ -32,7 +32,12 @@ struct ScheduleView: View {
             
             if viewModel.showingError {
                 VStack(alignment: .center) {              
-                    Text("При загрузке данных произошла ошибка, попробуйте позже")
+                    Text("При загрузке данных произошла ошибка, попробуйте позже").lineLimit(0)
+                    Button(action: {
+                        self.viewModel.loadSchedule(for: UserDefaults.standard.string(forKey: "group") ?? "")
+                    }) {
+                        Text("Повторить попытку")
+                    }
                 }
             }
             

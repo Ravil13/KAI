@@ -128,7 +128,7 @@ class ScheduleViewModel: ObservableObject {
     
     init(scheduleService: ScheduleService = ScheduleServiceDefault()) {
         self.scheduleService = scheduleService
-        self.loadSchedule(for: "4435")
+        self.loadSchedule(for: UserDefaults.standard.string(forKey: "group") ?? "")
     }
     
     func loadSchedule(for groupNumber: String) {
