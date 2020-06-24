@@ -25,7 +25,10 @@ struct WeekPicker: View {
 }
 
 //struct WeekPicker_Previews: PreviewProvider {
+//
+//    @State var weekType = WeekType.even
+//    
 //    static var previews: some View {
-//        WeekPicker(weekType: )
+//        WeekPicker(weekType: $weekType)
 //    }
 //}

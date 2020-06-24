@@ -27,7 +27,11 @@ struct ScheduleView: View {
     var body: some View {
         NavigationView {
             if viewModel.isLoading {
-                LoadingView()
+                if #available(iOS 14.0, *) {
+                    ProgressView("Загрузка")
+                } else {
+                    LoadingView()
+                }
             }
             
             if viewModel.showingError {
