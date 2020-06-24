@@ -29,19 +29,16 @@ struct ScheduleList: View {
     var body: some View {
         List {
             ForEach(schedules) { schedule in
-                HeaderView(text: Text(schedule.day.rawValue))
-                    .listRowBackground((Color("tableViewBackground")))
-                
-                ForEach(schedule.lessons) { lesson in
-                    if lesson.dayDate != self.weekType.opposite.rawValue {
-                        LessonView(lesson: lesson)
+                Section(header: Text(schedule.day.rawValue)) {
+                    ForEach(schedule.lessons) { lesson in
+                        if lesson.dayDate != self.weekType.opposite.rawValue {
+                            LessonView(lesson: lesson)
+                        }
                     }
                 }
-                .listRowBackground(Color("cellCollor"))
-                .padding(.horizontal, 20)
             }
-        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-        }
+        }.listStyle(GroupedListStyle())
+        .animation(.easeInOut)
     }
 }
 
