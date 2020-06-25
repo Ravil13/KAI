@@ -32,6 +32,7 @@
 		CE709DDA23C506AB00B1D537 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE709DD923C506AB00B1D537 /* ScheduleView.swift */; };
 		CEBCC76023FAC82B00B2AD8C /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBCC75F23FAC82B00B2AD8C /* NewsService.swift */; };
 		CEC099E42425477000C8DE3E /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC099E32425477000C8DE3E /* NewsView.swift */; };
+		CED1404D24A35F910063557A /* Bundle+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1404C24A35F910063557A /* Bundle+Decodable.swift */; };
 		CEE3A12A241EAC3E0045E5F9 /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE3A129241EAC3E0045E5F9 /* SafariView.swift */; };
 		CEED6E4723EEB7530080A6C3 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEED6E4623EEB7530080A6C3 /* LoadingView.swift */; };
 		CEFB56F123D230A500A64DA9 /* MapScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB56ED23D230A500A64DA9 /* MapScreen.swift */; };
@@ -71,6 +72,7 @@
 		CE709DD923C506AB00B1D537 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		CEBCC75F23FAC82B00B2AD8C /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		CEC099E32425477000C8DE3E /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		CED1404C24A35F910063557A /* Bundle+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Decodable.swift"; sourceTree = "<group>"; };
 		CEE3A129241EAC3E0045E5F9 /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 		CEED6E4623EEB7530080A6C3 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		CEFB56ED23D230A500A64DA9 /* MapScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapScreen.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				CE709DB723C4DF5D00B1D537 /* SceneDelegate.swift */,
 				CE709DD323C4E37900B1D537 /* WebError.swift */,
 				CE05DB1323D4BEF9004A1E47 /* CurrentDay.swift */,
+				CED1404C24A35F910063557A /* Bundle+Decodable.swift */,
 				CE009CBA241E8CBD0069862D /* Schedule */,
 				CE009CAF241E58E40069862D /* News */,
 				CEFB56EC23D230A500A64DA9 /* Map */,
@@ -403,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE709DD023C4E01C00B1D537 /* Schedule.swift in Sources */,
+				CED1404D24A35F910063557A /* Bundle+Decodable.swift in Sources */,
 				CEFB56F623D230B500A64DA9 /* MapView.swift in Sources */,
 				CEE3A12A241EAC3E0045E5F9 /* SafariView.swift in Sources */,
 				CE709DD623C504E100B1D537 /* LessonView.swift in Sources */,

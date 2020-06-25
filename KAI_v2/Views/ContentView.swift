@@ -23,12 +23,14 @@ struct ContentView: View {
                     Text("Новости")
             }
             
-            MapView()
-                .tabItem {
-                    Image(systemName: "map")
-                    Text("Карта")
+            if #available(iOS 14.0, *) {
+                MapView()
+                    .tabItem {
+                        Image(systemName: "map")
+                        Text("Карта")
+                    }
+                    .edgesIgnoringSafeArea(.all)
             }
-            .edgesIgnoringSafeArea(.all)
         }
     }
 }
